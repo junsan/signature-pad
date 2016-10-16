@@ -1,0 +1,16 @@
+{
+    "apps": [
+        {
+            "name": "angular",
+            "cwd": "Users/Jun/Desktop/angular2-signaturepad-demo-master",
+            "args": "-p 8080 -d false",
+            "script": "/root/.nvm/v4.2.6/bin/http-server"
+        },
+        {
+            "name": "api",
+            "cwd": "Users/Jun/Desktop/angular2-signaturepad-demo-master",
+            "script": "app.js",
+            "watch": true
+        }
+    ]
+}
