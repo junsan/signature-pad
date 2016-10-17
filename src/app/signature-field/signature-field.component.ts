@@ -1,6 +1,7 @@
 import { Component, ViewChild, forwardRef }        from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { SignaturePad }                            from 'angular2-signaturepad/signature-pad';
+import { Router }                                  from '@angular/router';
 
 /*
   Generated class for the SignatureField component.
@@ -21,6 +22,9 @@ import { SignaturePad }                            from 'angular2-signaturepad/s
 })
 export class SignatureFieldComponent implements ControlValueAccessor {
   @ViewChild(SignaturePad) public signaturePad: SignaturePad;
+
+  constructor(public router: Router) {
+  }
 
   public options: Object = {};
 
@@ -57,9 +61,10 @@ export class SignatureFieldComponent implements ControlValueAccessor {
   public ngAfterViewInit(): void {
     this.signaturePad.clear();
   }
-
+  public fullname = '';
   public drawComplete(): void {
     this.signature = this.signaturePad.toDataURL();
+    this.router.navigate(['/viewed', this.signature, this.fullname]);
   }
 
   private signaturePadOptions: Object = { 

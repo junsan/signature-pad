@@ -1,22 +1,13 @@
-import { Component }              from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component }  from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 
 export class AppComponent {
 
   public title = 'Sample Contract';
-  private form: FormGroup;
-
-  constructor(fb: FormBuilder) {
-
-    this.form = fb.group({
-      signatureField: '',
-    });
-  }
 
 }

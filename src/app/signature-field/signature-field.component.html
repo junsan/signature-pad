@@ -1,6 +1,6 @@
 <div class="form-group">
     <label for="exampleInputEmail1">Your Name</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <input type="name" class="form-control" id="fullname" [(ngModel)]="fullname" placeholder="Full Name">
 </div>
 <div class="panel panel-default">
 	  <div class="panel-heading" style="font-weight: bold;">Draw your signature here</div>
@@ -10,6 +10,6 @@
 </div>
 <br>
 <div class="actions">
-	<button class="btn btn-primary" type="submit" style="margin-right: 10px">Sign & Confirm</button> 
+	<button class="btn btn-primary" (click)="drawComplete()" style="margin-right: 10px">Sign & Confirm</button> 
 	<button class="btn btn-default" (click)="ngAfterViewInit()" type="submit">Clear</button>
 </div>

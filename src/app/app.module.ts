@@ -6,18 +6,25 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SignaturePadModule } from 'angular2-signaturepad';
 import { SignatureFieldComponent } from './signature-field/signature-field.component';
+import { ViewedComponent } from './viewed.component';
+import { SignComponent } from './sign.component';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignatureFieldComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    SignaturePadModule
+    SignaturePadModule,
+    AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    SignatureFieldComponent,
+    ViewedComponent,
+    SignComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
